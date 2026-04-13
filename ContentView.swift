@@ -3,6 +3,10 @@ import SwiftUI
 struct ContentView: View {
     @State var name = ""
     var body: some View {
+        Image("ball")
+            .resizable()
+            .frame(width: 150, height: 150)
+            .border(Color.cyan, width: 5)
      Text("Evan")
             .font(.system(size: 50, weight: .light, design: .serif))
             .foregroundStyle(.blue)
