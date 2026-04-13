@@ -2,8 +2,11 @@ import SwiftUI
 
 struct ContentView: View {
     @State var name = ""
+    @State var number = 0
     var body: some View {
-     Text("Evan")
+     
+        Text("\(number)")
+        Text("Evan")
             .font(.system(size: 50, weight: .light, design: .serif))
             .foregroundStyle(.blue)
         Text("Olivia")
@@ -21,7 +24,12 @@ struct ContentView: View {
             Text("Clear")
                 .foregroundStyle(.blue)
                 .font(.system(size: 30, weight: .bold, design: .monospaced))
+            
         }
-
+        Image(systemName: "arrow.up")
+            .font(.system(size: 100, weight: .bold, design: .default))
+            .onTapGesture {
+                number += 1
+            }
     }
 }
