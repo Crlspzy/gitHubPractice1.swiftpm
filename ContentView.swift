@@ -4,6 +4,11 @@ struct ContentView: View {
     @State var name = ""
     @State var number = 0
     var body: some View {
+        Image("ball")
+            .resizable()
+            .frame(width: 150, height: 150)
+            .border(Color.cyan, width: 5)
+     Text("Evan")
      
         Text("\(number)")
         Text("Evan")
