@@ -3,13 +3,14 @@ import SwiftUI
 struct ContentView: View {
     @State var name = ""
     @State var number = 0
+    @State var clicks = 1
     var body: some View {
         Image("ball")
             .resizable()
             .frame(width: 150, height: 150)
             .border(Color.cyan, width: 5)
-     Text("Evan")
-     
+        
+        
         Text("\(number)")
         Text("Evan")
             .font(.system(size: 50, weight: .light, design: .serif))
@@ -34,7 +35,18 @@ struct ContentView: View {
         Image(systemName: "arrow.up")
             .font(.system(size: 100, weight: .bold, design: .default))
             .onTapGesture {
-                number += 1
+                number += clicks
+            }
+        Text("x2")
+            .font(.system(size: 50, weight: .bold, design: .default))
+            .onTapGesture {
+                
+                if number < 10 {
+                    clicks = clicks
+                } else {
+                    clicks *= 2
+                    number -= 10
+                }
             }
     }
 }
