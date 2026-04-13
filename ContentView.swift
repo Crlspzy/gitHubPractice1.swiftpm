@@ -12,6 +12,7 @@ struct ContentView: View {
             Text("Evan")
             
             Text("\(number)")
+                .font(.title)
             Text("Evan")
                 .font(.system(size: 50, weight: .light, design: .serif))
                 .foregroundStyle(.blue)
